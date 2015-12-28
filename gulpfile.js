@@ -199,5 +199,28 @@ gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras'], functio
         .pipe(gulp.dest('dist/scripts'));
 });
 
+
+gulp.task('jest', function () {
+    return gulp.src('src/app').pipe($.jest({
+        scriptPreprocessor: "../../node_modules/babel-jest",
+        unmockedModulePathPatterns: [
+            "node_modules/react"
+        ],
+        testDirectoryName: "src/app",
+        testPathIgnorePatterns: [
+            "node_modules",
+            "spec/support"
+        ],
+        moduleFileExtensions: [
+            "js",
+            "json",
+            "react"
+        ],
+        "testFileExtensions": [
+          "spec.js"
+        ]
+    }));
+});
+
 // Default task
 gulp.task('default', ['clean', 'build'  , 'jest'  ]);
