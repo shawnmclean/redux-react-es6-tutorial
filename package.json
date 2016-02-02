@@ -6,6 +6,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "^4.0.0",
+    "react-router-redux": "^2.1.0",
     "reactify": "latest",
     "redux": "^3.0.4"
   },
@@ -36,6 +37,8 @@
     "jest-cli": "latest",
     "main-bower-files": "~2.6.2",
     "redux-devtools": "^2.1.5",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.2",
     "strip-debug": "^1.0.1",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "~2.1"
